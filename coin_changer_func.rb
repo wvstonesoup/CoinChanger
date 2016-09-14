@@ -1,7 +1,8 @@
-def coins_for_change(cents_received)
-	
-		coins = {}
-
+def coins_in_change(cents_received)
+	coins = {}
+	if cents_received ==1
+		coins = {:penny => 1}
+	end
+	coins
 end
-#commited
-#coins = {:quarter => 25, :dime => 10, :nickel => 5, :penny => 1}
+
