@@ -11,7 +11,11 @@ def coins_in_change(cents_received)
 
 	if cents_received == 2 
 		coins[:penny] = cents_received 
- 	end  	
+ 	end  
+
+ 	if cents_received == 5 
+		coins[:nickel] = cents_received/5
+ 	end  		
  	coins 
 
  end
