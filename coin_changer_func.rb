@@ -1,8 +1,21 @@
-def coins_in_change(cents_received)
-	coins = {}
-	if cents_received ==1
-		coins = {:penny => 1}
-	end
-	coins
-end
 
+
+#coins = {:quarter => 25, :dime => 10, :nickle => 5, :penny => 1}
+
+def coins_in_change(cents_received) 
+ 	coins = {} 
+
+ 	if cents_received == 1 
+		coins[:penny] = cents_received 
+ 	end 
+
+	if cents_received == 2 
+		coins[:penny] = cents_received 
+ 	end  	
+ 	coins 
+
+ end
+ 
+ 
+ 
+ 
