@@ -5,14 +5,18 @@
 def coins_in_change(cents_received) 
  	coins = {} 
 
- 	if cents_received == 1 
-		coins[:penny] = cents_received 
- 	end 
+ # 	if cents_received == 1 
+	# 	coins[:penny] = cents_received 
+ # 	end 
 
-	if cents_received == 2 
-		coins[:penny] = cents_received 
- 	end  
+	# if cents_received == 2 
+	# 	coins[:penny] = cents_received 
+ # 	end  
 
+ 	if cents_received.between?(1,4)
+ 		coins[:penny] = cents_received
+ 	end
+ 	
  	if cents_received == 5 
 		coins[:nickel] = cents_received/5
  	end  	
@@ -24,7 +28,7 @@ def coins_in_change(cents_received)
 	if cents_received == 25 
 		coins[:quarter] = cents_received/25
 	end
-	
+
  	coins 
 
  end
