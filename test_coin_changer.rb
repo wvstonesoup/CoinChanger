@@ -26,14 +26,14 @@ class TestCoinChanger < Minitest::Test
 		assert_equal({:nickel => 1}, coins_in_change(cents_received))
 	end
 
-	# def test_one_dime_is_ten_cents
-	# 	cents_received = 10
-	# 	assert_equal({:dime => 1}, coins_in_change(cents_received))
-	# end
+	def test_one_dime_is_ten_cents
+		cents_received = 10
+		assert_equal({:dime => 1}, coins_in_change(cents_received))
+	end
 
-		# def test_one_quarter_is_25_cents
-	# 	cents_received = 25
-	# 	assert_equal({:quarter => 1}, coins_in_change(cents_received))
-	# end
+		def test_one_quarter_is_25_cents
+		cents_received = 25
+		assert_equal({:quarter => 1}, coins_in_change(cents_received))
+	end
 
 end

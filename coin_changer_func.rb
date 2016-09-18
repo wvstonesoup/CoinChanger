@@ -15,7 +15,16 @@ def coins_in_change(cents_received)
 
  	if cents_received == 5 
 		coins[:nickel] = cents_received/5
- 	end  		
+ 	end  	
+
+ 	if cents_received == 10 
+		coins[:dime] = cents_received/10
+	end
+
+	if cents_received == 25 
+		coins[:quarter] = cents_received/25
+	end
+	
  	coins 
 
  end
