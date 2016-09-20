@@ -26,6 +26,11 @@ class TestCoinChanger < Minitest::Test
 		assert_equal({:nickel => 1}, coins_in_change(cents_received))
 	end
 
+	def test_6cents_is_one_nickel_plus_one_penny
+		cents_received = 6
+		assert_equal({:nickel => 1, :penny => 1}, coins_in_change(cents_received))
+	end
+
 	def test_one_dime_is_ten_cents
 		cents_received = 10
 		assert_equal({:dime => 1}, coins_in_change(cents_received))
@@ -36,9 +41,24 @@ class TestCoinChanger < Minitest::Test
 		assert_equal({:dime => 1, :nickel => 1, :penny => 2}, coins_in_change(cents_received))
 	end
 
+	def test_22cents_is_two_dimes_plus_two_pennies
+		cents_received = 22
+		assert_equal({:dime => 2, :penny =>2}, coins_in_change(cents_received))
+	end 
+
 	def test_one_quarter_is_25_cents
 		cents_received = 25
 		assert_equal({:quarter => 1}, coins_in_change(cents_received))
+	end
+
+	def test_41cents_equals_one_of_each_coin
+		cents_received = 41
+		assert_equal({:quarter =>1, :dime => 1, :nickel => 1, :penny =>1}, coins_in_change(cents_received))
+	end
+
+	def test_50cents_equals_one_half_dollar
+		cents_received = 50
+		assert_equal({:half_dollar => 1}, coins_in_change(cents_received))
 	end
 
 end
